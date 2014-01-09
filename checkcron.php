@@ -8,6 +8,8 @@ function add_date($orgDate){
 }	
 
 //return the published date, content
+//NOTE: this v1 Twitter API needs to be migrated
+//Please migrate to API v1.1. https://dev.twitter.com/docs/api/1.1/overview
 function parseTwitter($tag, $last_check_date){
 		$searchUrl = "http://search.twitter.com/search.atom?rpp=85&q=" . $tag;
 
@@ -159,10 +161,10 @@ $friendCount = getFriendCount($usernameList, $MIN_NUM_FOLLOWERS);
 
 // find if this user is bigtime
 if(count($friendCount) > 0){
-	$to = 'caitlin@omgpop.com, brian@stupidventures.com';
+	$to = 'to@email.com, to2@email2.com';
 	$headers = 'Content-Type: text/html; charset="UTF-8"' . "\r\n" .
-				'From: slingtweet@stupidventures.com' . "\r\n" .
-	    		'Reply-To: brian@stupidventures.com' . "\r\n" ;
+				'From: slingtweet@domain.com' . "\r\n" .
+	    		'Reply-To: slingtweet@domain.com' . "\r\n" ;
 	$message = '';
 	$subject = '';
 	
